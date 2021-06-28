@@ -19,6 +19,7 @@ resource "aws_lambda_function" "lambda_function" {
   runtime          = "python3.8"
   filename         = "package.zip"
   function_name    = "minimal_lambda_function"
+  source_code_hash = "${base64sha256(filebase64("package.zip"))}"
 }
 
 resource "aws_iam_role" "lambda_exec_role" {

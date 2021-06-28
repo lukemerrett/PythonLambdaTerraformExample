@@ -46,6 +46,8 @@ Run the following command to send test data to the Lambda to check it is functio
 aws lambda invoke --function-name minimal_lambda_function --region eu-west-1 --payload '{\"key1\":\"value1\", \"key2\":\"value2\", \"key3\":\"value3\"}' --cli-binary-format raw-in-base64-out test_response.txt
 ```
 
+This will call the function, then create a `test_response.txt` file containing any data returned from the Lambda.
+
 
 ## Tearing Down the Lambda
 

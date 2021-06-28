@@ -7,8 +7,14 @@ Playing with how to set up a Python AWS Lambda using Terraform that can talk to 
 Each of these need to be installed and available on your path:
 
 * [Terraform CLI](https://www.terraform.io/downloads.html)
-* [Python 3.9.5+](https://www.python.org/downloads/)
+* [Python 3.8+](https://www.python.org/downloads/)
 * [AWS CLI](https://aws.amazon.com/cli/)
+
+On cloning the repository, you'll need to get the Terraform dependencies by running:
+
+```
+terraform init
+```
 
 ## Deployment
 

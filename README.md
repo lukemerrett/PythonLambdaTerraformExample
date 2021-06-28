@@ -51,7 +51,11 @@ This will call the function, then create a `test_response.txt` file containing a
 
 ## Tearing Down the Lambda
 
-- [ ] TO DO
+To delete all the deployed resources you can run:
+
+```
+terraform destroy
+```
 
 ## Sources
 

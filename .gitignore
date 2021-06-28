@@ -130,3 +130,5 @@ dmypy.json
 
 # Project specific
 package.zip
+.terraform/
+.terraform.lock.hcl

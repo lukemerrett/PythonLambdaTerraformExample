@@ -62,3 +62,4 @@ terraform destroy
 * [Minimal AWS Lambda + Python + Terraform Example](https://www.davidbegin.com/the-most-minimal-aws-lambda-function-with-python-terraform/)
 * [Creating a zip archive in Python](https://stackoverflow.com/questions/1855095/how-to-create-a-zip-archive-of-a-directory-in-python)
 * [Terraform AWS Lambda Docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function)
+* [Terraform AWS S3 Bucket Docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)

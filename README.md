@@ -16,6 +16,12 @@ On cloning the repository, you'll need to get the Terraform dependencies by runn
 terraform init
 ```
 
+You'll also need to set up you local AWS credentials to be able to deploy and test the Lambda.  Use this to start the wizard to set up your default local credentials:
+
+```
+aws configure
+```
+
 ## Deployment
 
 Firstly we need to create the archive that will be used for deployment by running:
@@ -34,7 +40,12 @@ terraform apply
 
 ## Testing the Lambda
 
-- [ ] TO DO
+Run the following command to send test data to the Lambda to check it is functioning
+
+```bash
+aws lambda invoke --function-name minimal_lambda_function --region eu-west-1 --payload '{\"key1\":\"value1\", \"key2\":\"value2\", \"key3\":\"value3\"}' --cli-binary-format raw-in-base64-out test_response.txt
+```
+
 
 ## Tearing Down the Lambda
 

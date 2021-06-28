@@ -20,7 +20,7 @@ python build_and_package.py
 
 This will create a file called `package.zip` at the route of the repository.
 
-Then we need to deploy it using:
+Then we need to deploy it using (deploys to `eu-west-1` by default):
 
 ```
 terraform apply
@@ -38,3 +38,4 @@ terraform apply
 
 * [Minimal AWS Lambda + Python + Terraform Example](https://www.davidbegin.com/the-most-minimal-aws-lambda-function-with-python-terraform/)
 * [Creating a zip archive in Python](https://stackoverflow.com/questions/1855095/how-to-create-a-zip-archive-of-a-directory-in-python)
+* [Terraform AWS Lambda Docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function)

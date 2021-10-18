@@ -8,6 +8,6 @@ phases:
     commands:
       - terraform init
       - terraform apply
-  artifacts:
-    files: 
-      - package.zip
+artifacts:
+  files: 
+    - package.zip

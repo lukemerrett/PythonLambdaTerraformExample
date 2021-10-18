@@ -28,15 +28,7 @@ aws configure
 
 ## Deployment
 
-Firstly we need to create the archive that will be used for deployment by running:
-
-```
-python build_and_package.py
-```
-
-This will create a file called `package.zip` at the route of the repository.
-
-Then we need to deploy it using (deploys to `eu-west-1` by default):
+Can be deployed using this command (deploys to `eu-west-1` by default):
 
 ```
 terraform apply

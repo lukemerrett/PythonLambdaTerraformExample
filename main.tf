@@ -19,15 +19,24 @@ resource "aws_s3_bucket" "bucket" {
     acl = "private"
 }
 
+# Create a zip file of the code to be used by the Lambda
+data "archive_file" "zip_file" {
+  type = "zip"
+  source_dir = "src"
+  output_path = "package.zip"
+}
+
 # Create a function to receive Lambda events and write them to the bucket
 resource "aws_lambda_function" "lambda_function" {
   role             = "${aws_iam_role.lambda_exec_role.arn}"
-  handler          = "src.lambda.handler"
+  handler          = "lambda.handler"
   runtime          = "python3.8"
-  filename         = "package.zip"
+  filename         = data.archive_file.zip_file.output_path
   function_name    = "bucket_writer"
   # Necessary as Terraform uses the hash to see if a new version of the source code needs uplodating
-  source_code_hash = "${base64sha256(filebase64("package.zip"))}"
+  source_code_hash = "${base64sha256(filebase64(data.archive_file.zip_file.output_path))}"
+
+  depends_on       = [ data.archive_file.zip_file ]
 }
 
 # The IAM Role the Lambda will use, this grants it permissions

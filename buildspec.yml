@@ -4,6 +4,8 @@ phases:
   install:
     runtime-versions:
       python: 3.8
+    commands:
+      - unzip build/terraform_1.0.9_linux_amd64.zip -d /bin
   build:
     commands:
       - terraform init

@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
-      - sudo unzip install/terraform_1.0.9_linux_amd64.zip -d /bin
+      - unzip install/terraform_1.0.9_linux_amd64.zip -d /usr/bin
   build:
     commands:
       - terraform init

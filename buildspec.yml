@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - terraform init
-      - terraform apply
+      - terraform apply -auto-approve
 artifacts:
   files: 
     - package.zip
